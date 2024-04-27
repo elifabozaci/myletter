@@ -59,11 +59,7 @@
         .vibrant-colors {
             display: inline-block;
             font-size: 36px;
-        }
-
-        .vibrant-colors span {
-            display: inline-block;
-            margin-right: 5px; /* Add space between characters */
+            color: transparent; /* Hide text color */
             animation: colorChange 5s infinite alternate; /* Color change animation */
         }
 
@@ -80,19 +76,7 @@
 <body>
     <div class="container">
         <h1 class="vibrant-colors">
-            <span>Y</span>
-            <span>o</span>
-            <span>u</span>
-            <span>G</span>
-            <span>o</span>
-            <span>t</span>
-            <span>A</span>
-            <span>L</span>
-            <span>e</span>
-            <span>t</span>
-            <span>t</span>
-            <span>e</span>
-            <span>r</span>
+            YOU GOT A LETTER
         </h1>
         <label for="plotSelect">Choose your letter's topic:</label>
         <select id="plotSelect" onchange="showInputFields()">
