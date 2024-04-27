@@ -10,14 +10,18 @@
             font-family: Arial, sans-serif;
             background-color: #f0f0f0;
             padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
         }
         .container {
             max-width: 800px;
-            margin: 0 auto;
             background-color: #fff;
             padding: 20px;
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center; /* Center text inside container */
         }
         label, input, button {
             display: block;
@@ -38,7 +42,7 @@
 </head>
 <body>
     <div class="container">
-        <h1>YOU GOT A LETTER</h1>
+        <h1 style="color: #007bff;">YOU GOT A LETTER</h1>
         <label for="plotSelect">Choose your letter's topic:</label>
         <select id="plotSelect" onchange="showInputFields()">
             <option value="">Select a plot</option>
@@ -104,7 +108,6 @@
                 case 'plot3':
                     story = `My dear friend, ${ageInput} days ago I had a picnic with my family at ${placeInput}. Surprisingly, I encountered ${nameInput} there. They had a suitcase. We ate many things together. At the end of the day, we went home by a ${vehicleInput}.`;
                     break;
-                    
             }
 
             storyOutput.innerText = story;
