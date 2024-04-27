@@ -13,7 +13,7 @@
             justify-content: center;
             align-items: center;
             height: 100vh;
-            background-image: url('https://64.media.tumblr.com/01c781d9bf0f5423d670512ffb17098f/f63cef2312e76d22-bd/s500x750/92e7a82419116dc4260ccba5152fddcc6c7b962c.jpg'); /* Replace 'path/to/your/image.jpg' with the actual path to your image */
+            background-image: url('https://i.pinimg.com/564x/a5/a9/26/a5a9266b188525b93871d74e18272109.jpg'); /* Replace 'path/to/your/image.jpg' with the actual path to your image */
             background-size: cover; /* Cover the entire background */
             background-repeat: no-repeat; /* Prevent background image from repeating */
         }
@@ -23,24 +23,9 @@
             padding: 20px;
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-
-    
-          
-            
-    
-
-          
-          Expand Down
-          
-            
-    
-
-          
-          Expand Up
-    
-    @@ -45,7 +47,6 @@
-  
-            text-align: center; /* Center text inside container */
+        }
+        .container h1 {
+            margin-bottom: 20px;
         }
         label, input, button {
             display: block;
@@ -61,24 +46,29 @@
 </head>
 <body>
     <div class="container">
-        <h1 style="color: #007bff;">YOU GOT A LETTER</h1>
+        <h1>
+            <span style="color: pink;">Y</span>
+            <span style="color: green;">o</span>
+            <span style="color: blue;">u</span>
+            <span style="color: yellow;"> </span>
+            <span style="color: orange;">g</span>
+            <span style="color: purple;">o</span>
+            <span style="color: red;">t</span>
+            <span style="color: cyan;"> </span>
+            <span style="color: magenta;">a</span>
+            <span style="color: brown;"> </span>
+            <span style="color: teal;">l</span>
+            <span style="color: darkblue;">e</span>
+            <span style="color: darkgreen;">t</span>
+            <span style="color: darkred;">t</span>
+            <span style="color: darkcyan;">e</span>
+            <span style="color: darkmagenta;">r</span>
+        </h1>
         <label for="plotSelect">Choose your letter's topic:</label>
         <select id="plotSelect" onchange="showInputFields()">
             <option value="plot1">Plot 1: My summer holiday</option>
             <option value="plot2">Plot 2: My interesting dream</option>
             <option value="plot3">Plot 3: Picnic with my family</option>
-
-    
-          
-            
-    
-
-          
-          Expand Down
-    
-    
-  
-            <!-- Add more plot options if needed -->
         </select>
         <!-- Input fields for user data -->
         <div id="inputFields" style="display: none;">
