@@ -28,7 +28,6 @@
 
         .container h1 {
             margin-bottom: 20px;
-            letter-spacing: 0; /* Remove letter spacing */
         }
 
         label, input, button {
@@ -55,24 +54,45 @@
             padding: 20px;
             border-radius: 8px;
         }
+
+        /* Styling for the vibrant light colors */
+        .vibrant-colors {
+            display: inline-block;
+            font-size: 36px;
+        }
+
+        .vibrant-colors span {
+            display: inline-block;
+            margin-right: 5px; /* Add space between characters */
+            animation: colorChange 5s infinite alternate; /* Color change animation */
+        }
+
+        /* Keyframes for color change animation */
+        @keyframes colorChange {
+            0% { color: #ff3399; }
+            25% { color: #3399ff; }
+            50% { color: #ff66cc; }
+            75% { color: #66ccff; }
+            100% { color: #ffcc66; }
+        }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>
-            <span style="color: #ffd700;">Y</span>
-            <span style="color: #ffffe0;">o</span>
-            <span style="color: #e6e6fa;">u</span>
-            <span style="color: #f0e68c;">G</span>
-            <span style="color: #faf0e6;">o</span>
-            <span style="color: #f5f5dc;">t</span>
-            <span style="color: #d3d3d3;">A</span>
-            <span style="color: #f0e68c;">L</span>
-            <span style="color: #ffffe0;">e</span>
-            <span style="color: #fff8dc;">t</span>
-            <span style="color: #dcdcdc;">t</span>
-            <span style="color: #f0e68c;">e</span>
-            <span style="color: #d3d3d3;">r</span>
+        <h1 class="vibrant-colors">
+            <span>Y</span>
+            <span>o</span>
+            <span>u</span>
+            <span>G</span>
+            <span>o</span>
+            <span>t</span>
+            <span>A</span>
+            <span>L</span>
+            <span>e</span>
+            <span>t</span>
+            <span>t</span>
+            <span>e</span>
+            <span>r</span>
         </h1>
         <label for="plotSelect">Choose your letter's topic:</label>
         <select id="plotSelect" onchange="showInputFields()">
