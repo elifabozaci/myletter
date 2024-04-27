@@ -9,30 +9,21 @@
         body {
             font-family: Arial, sans-serif;
             background-color: #f0f0f0;
+            padding: 20px;
         }
         .container {
             max-width: 800px;
-            margin: 20px auto;
-            padding: 20px;
+            margin: 0 auto;
             background-color: #fff;
+            padding: 20px;
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
-        h1, h2 {
-            text-align: center;
-        }
-        label {
+        label, input, button {
             display: block;
             margin-bottom: 10px;
         }
-        select {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 20px;
-        }
         button {
-            display: block;
-            width: 100%;
             padding: 10px;
             background-color: #007bff;
             color: #fff;
@@ -48,59 +39,65 @@
 <body>
     <div class="container">
         <h1>Story Plot Generator</h1>
-        <h2>Select a plot:</h2>
         <label for="plotSelect">Choose a plot:</label>
         <select id="plotSelect">
             <option value="plot1">Plot 1: Mystery in the Old Mansion</option>
             <option value="plot2">Plot 2: Space Odyssey</option>
-            <option value="plot3">Plot 3: Time Travel Dilemma</option>
-            <option value="plot4">Plot 4: Fantasy Quest</option>
+            <!-- Add more plot options if needed -->
         </select>
 
-        <!-- Add input fields after the story plot selection -->
-        <label for="nameInput">Your Name:</label>
-        <input type="text" id="nameInput" placeholder="Enter your name">
+        <!-- Input fields for user data -->
+        <div id="inputFields" style="display: none;">
+            <label for="nameInput">Your Name:</label>
+            <input type="text" id="nameInput" placeholder="Enter your name">
 
-        <label for="ageInput">Your Age:</label>
-        <input type="number" id="ageInput" placeholder="Enter your age">
+            <label for="ageInput">Your Age:</label>
+            <input type="number" id="ageInput" placeholder="Enter your age">
 
-        <label for="colorInput">Your Favorite Color:</label>
-        <input type="text" id="colorInput" placeholder="Enter your favorite color">
+            <label for="colorInput">Your Favorite Color:</label>
+            <input type="text" id="colorInput" placeholder="Enter your favorite color">
+        </div>
 
-        <button onclick="generateStory()">Generate Story</button>
+        <button onclick="showInputFields()">Next</button>
+        <button id="generateBtn" onclick="generateStory()" style="display: none;">Generate Story</button>
         <div id="storyOutput"></div>
     </div>
 
     <script>
-    function generateStory() {
-        var plotSelect = document.getElementById('plotSelect');
-        var selectedPlot = plotSelect.value;
-        var storyOutput = document.getElementById('storyOutput');
-
-        // Get user inputs
-        var nameInput = document.getElementById('nameInput').value;
-        var ageInput = document.getElementById('ageInput').value;
-        var colorInput = document.getElementById('colorInput').value;
-
-        // Generate story based on plot and user inputs
-        var story = '';
-
-        switch (selectedPlot) {
-            case 'plot1':
-                story = `Once upon a time, in the old mansion on the hill, ${nameInput} discovered a hidden secret at the age of ${ageInput}, revealing a mysterious ${colorInput} room...`;
-                break;
-            case 'plot2':
-                story = `In a galaxy far, far away, ${nameInput} embarked on a daring space odyssey at the age of ${ageInput}, surrounded by the mesmerizing colors of ${colorInput} space...`;
-                break;
-            // Add cases for other plots as needed
-            default:
-                story = 'Select a plot to generate a story.';
-                break;
+        function showInputFields() {
+            document.getElementById('inputFields').style.display = 'block';
+            document.getElementById('generateBtn').style.display = 'block';
+            document.querySelector('button').style.display = 'none'; // Hide the "Next" button
         }
 
-        storyOutput.innerText = story;
-    }
-</script>
+        function generateStory() {
+            var plotSelect = document.getElementById('plotSelect');
+            var selectedPlot = plotSelect.value;
+            var storyOutput = document.getElementById('storyOutput');
 
+            // Get user inputs
+            var nameInput = document.getElementById('nameInput').value;
+            var ageInput = document.getElementById('ageInput').value;
+            var colorInput = document.getElementById('colorInput').value;
+
+            // Generate story based on plot and user inputs
+            var story = '';
+
+            switch (selectedPlot) {
+                case 'plot1':
+                    story = `Once upon a time, in the old mansion on the hill, ${nameInput} discovered a hidden secret at the age of ${ageInput}, revealing a mysterious ${colorInput} room...`;
+                    break;
+                case 'plot2':
+                    story = `In a galaxy far, far away, ${nameInput} embarked on a daring space odyssey at the age of ${ageInput}, surrounded by the mesmerizing colors of ${colorInput} space...`;
+                    break;
+                // Add cases for other plots as needed
+                default:
+                    story = 'Select a plot to generate a story.';
+                    break;
+            }
+
+            storyOutput.innerText = story;
+        }
+    </script>
 </body>
 </html>
