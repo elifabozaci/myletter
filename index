@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Story Plot Generator</title>
+    <style>
+        /* Add your CSS styles here */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2 {
+            text-align: center;
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+        button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Story Plot Generator</h1>
+        <h2>Select a plot:</h2>
+        <label for="plotSelect">Choose a plot:</label>
+        <select id="plotSelect">
+            <option value="plot1">Plot 1: Mystery in the Old Mansion</option>
+            <option value="plot2">Plot 2: Space Odyssey</option>
+            <option value="plot3">Plot 3: Time Travel Dilemma</option>
+            <option value="plot4">Plot 4: Fantasy Quest</option>
+        </select>
+        <button onclick="generateStory()">Generate Story</button>
+        <div id="storyOutput"></div>
+    </div>
+
+    <script>
+        function generateStory() {
+            var plotSelect = document.getElementById('plotSelect');
+            var selectedPlot = plotSelect.value;
+            var storyOutput = document.getElementById('storyOutput');
+
+            // Add your story generation logic here
+            var story = '';
+
+            switch (selectedPlot) {
+                case 'plot1':
+                    story = 'Once upon a time, in the old mansion on the hill, a mysterious figure lurked in the shadows...';
+                    break;
+                case 'plot2':
+                    story = 'In a galaxy far, far away, a brave crew embarked on a perilous space odyssey to uncover the secrets of the cosmos...';
+                    break;
+                case 'plot3':
+                    story = 'The ticking of the time machine echoed through the ages as our protagonist faced a crucial decision that could alter history...';
+                    break;
+                case 'plot4':
+                    story = 'In a realm of magic and mythical creatures, a young hero embarked on a quest to restore balance to the kingdom...';
+                    break;
+                default:
+                    story = 'Select a plot to generate a story.';
+                    break;
+            }
+
+            storyOutput.innerText = story;
+        }
+    </script>
+</body>
+</html>
