@@ -40,7 +40,8 @@
     <div class="container">
         <h1>Story Plot Generator</h1>
         <label for="plotSelect">Choose a plot:</label>
-        <select id="plotSelect">
+        <select id="plotSelect" onchange="showInputFields()">
+            <option value="">Select a plot</option>
             <option value="plot1">Plot 1: Mystery in the Old Mansion</option>
             <option value="plot2">Plot 2: Space Odyssey</option>
             <!-- Add more plot options if needed -->
@@ -56,19 +57,23 @@
 
             <label for="colorInput">Your Favorite Color:</label>
             <input type="text" id="colorInput" placeholder="Enter your favorite color">
+
+            <button onclick="generateStory()">Generate Story</button>
         </div>
 
-        <button onclick="showInputFields()">Next</button>
-        <button id="generateBtn" onclick="generateStory()" style="display: none;">Generate Story</button>
         <div id="storyOutput"></div>
     </div>
 
     <script>
         function showInputFields() {
-            document.getElementById('inputFields').style.display = 'block';
-            document.getElementById('generateBtn').style.display = 'block';
-            document.getElementById('plotSelect').disabled = true; // Disable plot selection
-            document.querySelector('button').style.display = 'none'; // Hide the "Next" button
+            var plotSelect = document.getElementById('plotSelect');
+            var inputFields = document.getElementById('inputFields');
+
+            if (plotSelect.value !== '') {
+                inputFields.style.display = 'block';
+            } else {
+                inputFields.style.display = 'none';
+            }
         }
 
         function generateStory() {
