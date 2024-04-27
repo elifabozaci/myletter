@@ -57,10 +57,10 @@
             <input type="number" id="ageInput" placeholder="Enter a number">
 
             <label for="placeInput">A place:</label>
-            <input type="text" id="colorInput" placeholder="Enter a place name">
+            <input type="text" id="placeInput" placeholder="Enter a place name">
 
             <label for="vehicleInput">A vehicle:</label>
-            <input type="text" id="colorInput" placeholder="Enter a vehicle name">
+            <input type="text" id="vehicleInput" placeholder="Enter a vehicle name">
             
             <button onclick="generateStory()">Generate Story</button>
         </div>
@@ -88,21 +88,22 @@
             // Get user inputs
             var nameInput = document.getElementById('nameInput').value;
             var ageInput = document.getElementById('ageInput').value;
-            var colorInput = document.getElementById('colorInput').value;
+            var placeInput = document.getElementById('placeInput').value;
+            var vehicleInput = document.getElementById('vehicleInput').value;
 
             // Generate story based on plot and user inputs
             var story = '';
 
             switch (selectedPlot) {
                 case 'plot1':
-                    story = `My dear friend, this summer I went to ${placeInput} with ${nameInput} and stayed for ${ageInput} days. I went there by a ${colorInput} ${vehicleInput}` ;
+                    story = `My dear friend, this summer I went to ${placeInput} with ${nameInput} and stayed for ${ageInput} days. I went there by a ${vehicleInput}.`;
                     break;
                 case 'plot2':
-                    story = `My dear friend, I had a bizarre dream last night. I saw ${nameInput} talking to a ${vehicleInput} at ${placeInput}. After the day a ${colorInput} cat came and told ${nameInput} that it has ${ageInput} kittens. It was a strange dream.` ; 
-                case 'plot3':
-                    story = `My dear friend, ${ageInput} days ago I had a picnic with my family at ${placeInput}. Surprisingly, I encountered with ${nameInput} there. They had a ${colorInput} suitcase. We ate many things together. At the end of the day, we went home by a ${vehicleInput}` ;
+                    story = `My dear friend, I had a bizarre dream last night. I saw ${nameInput} talking to a ${vehicleInput} at ${placeInput}. After the day a cat came and told ${nameInput} that it has ${ageInput} kittens. It was a strange dream.`;
                     break;
-                    // Add cases for other plots as needed
+                case 'plot3':
+                    story = `My dear friend, ${ageInput} days ago I had a picnic with my family at ${placeInput}. Surprisingly, I encountered with ${nameInput} there. They had a suitcase. We ate many things together. At the end of the day, we went home by a ${vehicleInput}.`;
+                    break;
                 default:
                     story = 'Select a plot to generate a story.';
                     break;
@@ -112,4 +113,4 @@
         }
     </script>
 </body>
-</html> 
+</html>
