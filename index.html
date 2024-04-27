@@ -71,9 +71,27 @@
             75% { color: #66ccff; }
             100% { color: #ffcc66; }
         }
+
+        /* Cat animation styles */
+        .cat {
+            position: absolute;
+            top: 0;
+            left: -100px; /* Start the cat outside the viewport */
+            animation: catWalk 10s linear infinite; /* Cat walking animation */
+        }
+
+        @keyframes catWalk {
+            0% { transform: translateX(-100px); }
+            100% { transform: translateX(calc(100vw + 100px)); } /* Move the cat to the right edge of the viewport */
+        }
     </style>
 </head>
 <body>
+    <!-- Cat animation -->
+    <div class="cat">
+        <img src="https://media.giphy.com/media/JIX9t2j0ZTN9S/giphy.gif" alt="Walking Cat">
+    </div>
+
     <div class="container">
         <h1 class="vibrant-colors">
             YOU GOT A LETTER
