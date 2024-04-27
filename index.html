@@ -56,39 +56,51 @@
             <option value="plot3">Plot 3: Time Travel Dilemma</option>
             <option value="plot4">Plot 4: Fantasy Quest</option>
         </select>
+
+        <!-- Add input fields after the story plot selection -->
+        <label for="nameInput">Your Name:</label>
+        <input type="text" id="nameInput" placeholder="Enter your name">
+
+        <label for="ageInput">Your Age:</label>
+        <input type="number" id="ageInput" placeholder="Enter your age">
+
+        <label for="colorInput">Your Favorite Color:</label>
+        <input type="text" id="colorInput" placeholder="Enter your favorite color">
+
         <button onclick="generateStory()">Generate Story</button>
         <div id="storyOutput"></div>
     </div>
 
     <script>
-        function generateStory() {
-            var plotSelect = document.getElementById('plotSelect');
-            var selectedPlot = plotSelect.value;
-            var storyOutput = document.getElementById('storyOutput');
+    function generateStory() {
+        var plotSelect = document.getElementById('plotSelect');
+        var selectedPlot = plotSelect.value;
+        var storyOutput = document.getElementById('storyOutput');
 
-            // Add your story generation logic here
-            var story = '';
+        // Get user inputs
+        var nameInput = document.getElementById('nameInput').value;
+        var ageInput = document.getElementById('ageInput').value;
+        var colorInput = document.getElementById('colorInput').value;
 
-            switch (selectedPlot) {
-                case 'plot1':
-                    story = 'Once upon a time, in the old mansion on the hill, a mysterious figure lurked in the shadows...';
-                    break;
-                case 'plot2':
-                    story = 'In a galaxy far, far away, a brave crew embarked on a perilous space odyssey to uncover the secrets of the cosmos...';
-                    break;
-                case 'plot3':
-                    story = 'The ticking of the time machine echoed through the ages as our protagonist faced a crucial decision that could alter history...';
-                    break;
-                case 'plot4':
-                    story = 'In a realm of magic and mythical creatures, a young hero embarked on a quest to restore balance to the kingdom...';
-                    break;
-                default:
-                    story = 'Select a plot to generate a story.';
-                    break;
-            }
+        // Generate story based on plot and user inputs
+        var story = '';
 
-            storyOutput.innerText = story;
+        switch (selectedPlot) {
+            case 'plot1':
+                story = `Once upon a time, in the old mansion on the hill, ${nameInput} discovered a hidden secret at the age of ${ageInput}, revealing a mysterious ${colorInput} room...`;
+                break;
+            case 'plot2':
+                story = `In a galaxy far, far away, ${nameInput} embarked on a daring space odyssey at the age of ${ageInput}, surrounded by the mesmerizing colors of ${colorInput} space...`;
+                break;
+            // Add cases for other plots as needed
+            default:
+                story = 'Select a plot to generate a story.';
+                break;
         }
-    </script>
+
+        storyOutput.innerText = story;
+    }
+</script>
+
 </body>
 </html>
