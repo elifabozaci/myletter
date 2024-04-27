@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>YOU GOT A LETTER</title>
     <style>
-        /* Add your CSS styles here */
+        /* CSS styles */
         body {
             font-family: Arial, sans-serif;
             padding: 20px;
@@ -18,41 +18,24 @@
             background-repeat: no-repeat; /* Prevent background image from repeating */
         }
 
-    
-        
-          
-    
-
-        
-        Expand All
-    
-    @@ -23,24 +23,9 @@
-  
         .container {
             max-width: 800px;
             background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background for better readability */
             padding: 20px;
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px); /* Add a blur effect to the background */
         }
+
         .container h1 {
             margin-bottom: 20px;
         }
+
         label, input, button {
             display: block;
-
-    
-        
-          
-    
-
-        
-        Expand All
-    
-    @@ -61,24 +46,29 @@
-  
             margin-bottom: 10px;
         }
+
         button {
             padding: 10px;
             background-color: #007bff;
@@ -61,6 +44,7 @@
             border-radius: 4px;
             cursor: pointer;
         }
+
         button:hover {
             background-color: #0056b3;
         }
@@ -94,17 +78,6 @@
         </select>
         <!-- Input fields for user data -->
         <div id="inputFields" style="display: none;">
-
-    
-          
-            
-    
-
-          
-          Expand Down
-    
-    
-  
             <label for="nameInput">A name:</label>
             <input type="text" id="nameInput" placeholder="Enter a name">
             <label for="ageInput">A number:</label>
@@ -113,7 +86,6 @@
             <input type="text" id="placeInput" placeholder="Enter a place name">
             <label for="vehicleInput">A vehicle:</label>
             <input type="text" id="vehicleInput" placeholder="Enter a vehicle name">
-            
             <button onclick="generateStory()">Generate Story</button>
         </div>
         <div id="storyOutput"></div>
