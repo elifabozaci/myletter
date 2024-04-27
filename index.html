@@ -5,22 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>YOU GOT A LETTER</title>
     <style>
-        /* CSS styles */
+        /* Add your CSS styles here */
         body {
-            margin: 0;
             font-family: Arial, sans-serif;
-            padding: 0;
+            padding: 20px;
             display: flex;
             justify-content: center;
             align-items: center;
-            min-height: 100vh; /* Ensure body covers full viewport height */
-            background-image: url('https://source.unsplash.com/random'); /* Random image from Unsplash (cross-origin friendly) */
+            height: 100vh;
+            background-image: url('https://i.pinimg.com/564x/a5/a9/26/a5a9266b188525b93871d74e18272109.jpg'); /* Replace 'path/to/your/image.jpg' with the actual path to your image */
             background-size: cover; /* Cover the entire background */
             background-repeat: no-repeat; /* Prevent background image from repeating */
-            background-position: center; /* Center the background image */
         }
+
+    
+        
+          
+    
+
+        
+        Expand All
+    
+    @@ -23,24 +23,9 @@
+  
         .container {
-            width: 100%; /* Full width */
             max-width: 800px;
             background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background for better readability */
             padding: 20px;
@@ -32,6 +40,17 @@
         }
         label, input, button {
             display: block;
+
+    
+        
+          
+    
+
+        
+        Expand All
+    
+    @@ -61,24 +46,29 @@
+  
             margin-bottom: 10px;
         }
         button {
@@ -53,13 +72,13 @@
             <span style="color: pink;">Y</span>
             <span style="color: green;">o</span>
             <span style="color: blue;">u</span>
-            <span style="color: yellow;"> </span> <!-- Space between words -->
+            <span style="color: yellow;"> </span>
             <span style="color: orange;">g</span>
             <span style="color: purple;">o</span>
             <span style="color: red;">t</span>
-            <span style="color: cyan;"> </span> <!-- Space between words -->
+            <span style="color: cyan;"> </span>
             <span style="color: magenta;">a</span>
-            <span style="color: brown;"> </span> <!-- Space between words -->
+            <span style="color: brown;"> </span>
             <span style="color: teal;">l</span>
             <span style="color: darkblue;">e</span>
             <span style="color: darkgreen;">t</span>
@@ -75,6 +94,17 @@
         </select>
         <!-- Input fields for user data -->
         <div id="inputFields" style="display: none;">
+
+    
+          
+            
+    
+
+          
+          Expand Down
+    
+    
+  
             <label for="nameInput">A name:</label>
             <input type="text" id="nameInput" placeholder="Enter a name">
             <label for="ageInput">A number:</label>
@@ -83,12 +113,12 @@
             <input type="text" id="placeInput" placeholder="Enter a place name">
             <label for="vehicleInput">A vehicle:</label>
             <input type="text" id="vehicleInput" placeholder="Enter a vehicle name">
+            
             <button onclick="generateStory()">Generate Story</button>
         </div>
         <div id="storyOutput"></div>
     </div>
     <script>
-        // JavaScript functions
         function showInputFields() {
             var plotSelect = document.getElementById('plotSelect');
             var inputFields = document.getElementById('inputFields');
