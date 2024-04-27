@@ -8,16 +8,18 @@
         /* Add your CSS styles here */
         body {
             font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
             padding: 20px;
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
+            background-image: url('https://64.media.tumblr.com/01c781d9bf0f5423d670512ffb17098f/f63cef2312e76d22-bd/s500x750/92e7a82419116dc4260ccba5152fddcc6c7b962c.jpg'); /* Replace 'path/to/your/image.jpg' with the actual path to your image */
+            background-size: cover; /* Cover the entire background */
+            background-repeat: no-repeat; /* Prevent background image from repeating */
         }
         .container {
             max-width: 800px;
-            background-color: #fff;
+            background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background for better readability */
             padding: 20px;
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -45,7 +47,6 @@
         <h1 style="color: #007bff;">YOU GOT A LETTER</h1>
         <label for="plotSelect">Choose your letter's topic:</label>
         <select id="plotSelect" onchange="showInputFields()">
-            <option value="">Select a plot</option>
             <option value="plot1">Plot 1: My summer holiday</option>
             <option value="plot2">Plot 2: My interesting dream</option>
             <option value="plot3">Plot 3: Picnic with my family</option>
