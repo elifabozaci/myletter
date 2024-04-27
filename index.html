@@ -44,7 +44,7 @@
 </head>
 <body>
     <div class="container">
-        <h1 style="color: #007bff;">YOU GOT A LETTER</h1>
+        <h1 id="title">YOU GOT A LETTER</h1>
         <label for="plotSelect">Choose your letter's topic:</label>
         <select id="plotSelect" onchange="showInputFields()">
             <option value="plot1">Plot 1: My summer holiday</option>
@@ -74,6 +74,31 @@
     </div>
 
     <script>
+        // Function to generate a random color in hexadecimal format
+        function getRandomColor() {
+            var letters = '0123456789ABCDEF';
+            var color = '#';
+            for (var i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
+
+        // Get the title element
+        var title = document.getElementById('title');
+
+        // Split the title text into individual letters
+        var letters = title.textContent.split('');
+
+        // Replace the title text with spans for each letter with random colors
+        title.innerHTML = ''; // Clear the title text
+        letters.forEach(function(letter) {
+            var span = document.createElement('span'); // Create a span element
+            span.textContent = letter; // Set the text content of the span
+            span.style.color = getRandomColor(); // Assign a random color
+            title.appendChild(span); // Append the span to the title element
+        });
+
         function showInputFields() {
             var plotSelect = document.getElementById('plotSelect');
             var inputFields = document.getElementById('inputFields');
