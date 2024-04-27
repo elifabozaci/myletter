@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>YOU GOT A LETTER</title>
     <style>
-        /* Add your CSS styles here */
+        /* CSS styles */
         body {
             font-family: Arial, sans-serif;
             padding: 20px;
@@ -21,30 +21,13 @@
             padding: 20px;
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            background-image: url('https://64.media.tumblr.com/01c781d9bf0f5423d670512ffb17098f/f63cef2312e76d22-bd/s500x750/92e7a82419116dc4260ccba5152fddcc6c7b962c.jpg'); /* Replace 'path/to/your/image.jpg' with the actual path to your image */
+            background-image: url('https://images.unsplash.com/photo-1559057287-ce0f595679a8?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'); /* Random image from Unsplash (cross-origin friendly) */
             background-size: cover; /* Cover the entire background */
             background-repeat: no-repeat; /* Prevent background image from repeating */
             background-position: center; /* Center the background image */
         }
         .container h1 {
             margin-bottom: 20px;
-
-    
-          
-            
-    
-
-          
-          Expand Down
-          
-            
-    
-
-          
-          Expand Up
-    
-    @@ -50,13 +52,13 @@ <h1>
-  
         }
         label, input, button {
             display: block;
@@ -79,17 +62,6 @@
             <span style="color: teal;">l</span>
             <span style="color: darkblue;">e</span>
             <span style="color: darkgreen;">t</span>
-
-    
-          
-            
-    
-
-          
-          Expand Down
-    
-    
-  
             <span style="color: darkred;">t</span>
             <span style="color: darkcyan;">e</span>
             <span style="color: darkmagenta;">r</span>
@@ -110,12 +82,12 @@
             <input type="text" id="placeInput" placeholder="Enter a place name">
             <label for="vehicleInput">A vehicle:</label>
             <input type="text" id="vehicleInput" placeholder="Enter a vehicle name">
-            
             <button onclick="generateStory()">Generate Story</button>
         </div>
         <div id="storyOutput"></div>
     </div>
     <script>
+        // JavaScript functions
         function showInputFields() {
             var plotSelect = document.getElementById('plotSelect');
             var inputFields = document.getElementById('inputFields');
