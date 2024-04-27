@@ -20,7 +20,6 @@
 
         .container {
             max-width: 800px;
-            background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background for better readability */
             padding: 20px;
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -47,6 +46,13 @@
 
         button:hover {
             background-color: #0056b3;
+        }
+
+        /* Transparent box style */
+        .transparent-box {
+            background-color: rgba(255, 255, 255, 0.5); /* Semi-transparent white background for better readability */
+            padding: 20px;
+            border-radius: 8px;
         }
     </style>
 </head>
@@ -76,8 +82,8 @@
             <option value="plot2">Plot 2: My interesting dream</option>
             <option value="plot3">Plot 3: Picnic with my family</option>
         </select>
-        <!-- Input fields for user data -->
-        <div id="inputFields" style="display: none;">
+        <!-- Transparent box for user input -->
+        <div class="transparent-box" id="inputFields" style="display: none;">
             <label for="nameInput">A name:</label>
             <input type="text" id="nameInput" placeholder="Enter a name">
             <label for="ageInput">A number:</label>
