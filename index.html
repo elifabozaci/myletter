@@ -96,12 +96,22 @@
   
             <label for="nameInput">A name:</label>
             <input type="text" id="nameInput" placeholder="Enter a name">
-            <label for="ageInput">A number:</label>
-            <input type="number" id="ageInput" placeholder="Enter a number">
+            <label for="numberInput">A number:</label>
+            <input type="number" id="numberInput" placeholder="Enter a number">
             <label for="placeInput">A place:</label>
             <input type="text" id="placeInput" placeholder="Enter a place name">
             <label for="vehicleInput">A vehicle:</label>
             <input type="text" id="vehicleInput" placeholder="Enter a vehicle name">
+            <label for="colourInput">A colour:</label>
+            <input type="text" id="colourInput" placeholder="Enter a colour name">
+            <label for="occupationInput">An occupation:</label>
+            <input type="text" id="occupationInput" placeholder="Enter an occupation name">
+            <label for="shapeInput">A shape:</label>
+            <input type="text" id="shapeInput" placeholder="Enter a shape name">
+            <label for="objectInput">An object:</label>
+            <input type="text" id="objectInput" placeholder="Enter an object name">
+            <label for="emotionInput">An emotion:</label>
+            <input type="text" id="emotionInput" placeholder="Enter an emotion/feeling">
             <button onclick="generateStory()">Generate Story</button>
         </div>
         <div id="storyOutput"></div>
@@ -122,20 +132,25 @@
             var storyOutput = document.getElementById('storyOutput');
             // Get user inputs
             var nameInput = document.getElementById('nameInput').value;
-            var ageInput = document.getElementById('ageInput').value;
+            var numberInput = document.getElementById('numberInput').value;
             var placeInput = document.getElementById('placeInput').value;
             var vehicleInput = document.getElementById('vehicleInput').value;
+            var colourInput = document.getElementById('colourInput').value;
+            var occupationInput = document.getElementById('occupationInput').value;
+            var shapeInput = document.getElementById('shapeInput').value;
+            var objectInput = document.getElementById('objectInput').value;
+            var emotionInput = document.getElementById('emotionInput').value;
             // Generate story based on plot and user inputs
             var story = '';
             switch (selectedPlot) {
                 case 'plot1':
-                    story = `My dear friend, this summer I went to ${placeInput} with ${nameInput} and stayed for ${ageInput} days. I went there by a ${vehicleInput}.`;
+                    story = `My dear friend. I hope this letter finds you well. I wanted to share the wonderful adventures I had during my summer holiday with you. It was truly a memorable experience! Firstly, I traveled to ${placeInput} with my family by ${vehicleInput}, which made me feel quite ${emotionInput}. We explored the beautiful surroundings with vibrant ${colourInput} scenery. During our holiday, I met a fascinating person named Mr./Ms. ${nameInput}, who works as a ${occupationInput}. They showed me around the local area and taught me about their profession. I was amazed by their knowledge and dedication. One day, we visited a unique store with a ${shapeInput}-shaped entrance. Inside, there were so many interesting ${objectInput} I couldn't resist picking up a few souvenirs to remember the trip. Overall, my summer holiday was filled with fun, adventure, and new experiences. I can't wait to go back to ${placeInput} again and create more cherished memories. Wishing you a fantastic summer filled with happiness and adventure!`;
                     break;
                 case 'plot2':
-                    story = `My dear friend, I had a bizarre dream last night. I saw ${nameInput} talking to a ${vehicleInput} at ${placeInput}. After the day a cat came and told ${nameInput} that it has ${ageInput} kittens. It was a strange dream.`;
+                    story = `My dear friend, I had a bizarre dream last night. I saw ${nameInput} talking to a ${vehicleInput} at ${placeInput}. I felt ${emotionInput} when I approached them. Then, ${nameInput} saw me and took a(n) ${objectInput} from his pocket. The ${objectInput} was ${colourInput}, and ${nameInput} told me they were going to use it to fix the ${vehicleInput}. I asked ${nameInput} why they were talking to the ${vehicleInput} instead of fixing it and they told me they were waiting for ${numberInput} ${occupationInput}s. After they finished their words, I suddenly transformed into a(n) ${occupationInput} but neither ${nameInput} nor ${vehicleInput} were there. I was in front of a ${shapeInput} house and started walking away from the house to find ${nameInput}. While walking I heard my alarm ringing, and I woke up. What a strange dream it was!`;
                     break;
                 case 'plot3':
-                    story = `My dear friend, ${ageInput} days ago I had a picnic with my family at ${placeInput}. Surprisingly, I encountered ${nameInput} there. They had a suitcase. We ate many things together. At the end of the day, we went home by a ${vehicleInput}.`;
+                    story = `My dear friend. I wanted to share a delightful experience I had recently during a picnic with my family at ${placeInput}. It was a beautiful day, with the sun shining and a gentle breeze in the air. We packed our favorite foods and set off in our trusty ${vehicleInput}, excited for a day of relaxation and fun. Upon arriving at ${placeInput}, we found the perfect spot under a large ${colorInput} umbrella. As we unpacked our picnic basket, I noticed a friendly face nearby. It was ${nameInput}, carrying a colorful kite and looking quite ${emotionInput}. We invited ${nameInput} to join us, and together we enjoyed a delicious feast of sandwiches, fruits, and homemade treats. ${nameInput} shared stories of their adventures and hobbies, adding a joyful atmosphere to our gathering. After our meal, we decided to fly the ${shapeInput}-shaped kite with ${nameInput}. The sky was clear, and the kite soared gracefully, painting a beautiful picture against the blue backdrop. As the day was about to end, we thanked ${nameInput} for their company and said goodbye. We packed our belongings, including the kite and our cherished ${objectInput} souvenirs, and headed home, grateful for such a lovely day. I hope this letter brings a smile to your face, imagining the warmth and happiness of our picnic adventure. Wishing you many more joyful moments and happy picnics in the days ahead. Warm regards, A friend :)`;
                     break;
             }
             storyOutput.innerText = story;
