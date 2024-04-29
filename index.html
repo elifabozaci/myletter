@@ -68,6 +68,7 @@
             0% { transform: translateX(-100px); }
             100% { transform: translateX(calc(100vw + 100px)); } /* Move the cat to the right edge of the viewport */
         }
+
         /* Your additional styles */
         .transparent-box {
             background-image: url('https://i.pinimg.com/originals/4c/65/f9/4c65f913798dcd566fb929d0973a37e6.jpg');
@@ -106,9 +107,6 @@
         </select>
         <!-- Transparent box for user input -->
         <div class="transparent-box" id="inputFields" style="display: none;">
-
-    @@ -166,6 +167,7 @@ <h1 class="vibrant-colors">
-  
             <label for="nameInput">A name:</label>
             <input type="text" id="nameInput" placeholder="Enter a name">
             <label for="numberInput">A number:</label>
@@ -168,12 +166,11 @@
                     story = `My dear friend. I wanted to share a delightful experience I had recently during a picnic with my family at ${placeInput}. It was a beautiful day, with the sun shining and a gentle breeze in the air. We packed our favorite foods and set off in our trusty ${vehicleInput}, excited for a day of relaxation and fun. Upon arriving at ${placeInput}, we found the perfect spot under a large ${colorInput} umbrella. As we unpacked our picnic basket, I noticed a friendly face nearby. It was ${nameInput}, carrying a colorful kite and looking quite ${emotionInput}. We invited ${nameInput} to join us, and together we enjoyed a delicious feast of sandwiches, fruits, and homemade treats. ${nameInput} shared stories of their adventures and hobbies, adding a joyful atmosphere to our gathering. After our meal, we decided to fly the ${shapeInput}-shaped kite with ${nameInput}. The sky was clear, and the kite soared gracefully, painting a beautiful picture against the blue backdrop. As the day was about to end, we thanked ${nameInput} for their company and said goodbye. We packed our belongings, including the kite and our cherished ${objectInput} souvenirs, and headed home, grateful for such a lovely day. I hope this letter brings a smile to your face, imagining the warmth and happiness of our picnic adventure. Wishing you many more joyful moments and happy picnics in the days ahead. Warm regards, A friend :)`;
                     break;
                 case 'plot4':
-                    story = `My dear friend. I wanted to share about my fun day at the fun fair with you. I went there with ${nameInput} and had great time. Firstly, we watched a clown making ${objectInput}-shaped balloons. He made ${numberInput} balloons and gave me one bright ${colourInput} ${objectInput}-shaped balloon. However, it blew off 15 minutes later. It made me sad, but I forgot about it at costume cabin. I wore a(n) ${occupationInput} costume and ${nameInput} wore a hawk costume, we looked so funny together and we took many photos. Later, we tried a 4d ${vehicleInput} simulator, I had a great laugh when ${nameInput} insisted on visiting ${placeInput} with their virtual ${vehicleInput} but could not. After that we rode on ferris wheel and ate ice cream. I was feeling quite ${emotionInput} as the closing time was approaching. I hope to visit there with you some other day, maybe we can ride the roller coaster too. Have you ever ridden a roller coaster? I will be looking forward to hearing from you. A friend :)`
+                    story = `My dear friend. I wanted to share about my fun day at the fun fair with you. I went there with ${nameInput} and had great time. Firstly, we watched a clown making ${objectInput}-shaped balloons. He made ${numberInput} balloons and gave me one bright ${colourInput} ${objectInput}-shaped balloon. However, it blew off 15 minutes later. It made me sad, but I forgot about it at costume cabin. I wore a(n) ${occupationInput} costume and ${nameInput} wore a hawk costume, we looked so funny together and we took many photos. Later, we tried a 4d ${vehicleInput} simulator, I had a great laugh when {numberInput} insisted on visiting ${placeInput} with their virtual ${vehicleInput} but could not. After that we rode on ferris wheel and ate ice cream. I was feeling quite ${emotionInput} as the closing time was approaching. I hope to visit there with you some other day, maybe we can ride the roller coaster too. Have you ever ridden a roller coaster? I will be looking forward to hearing from you. A friend :)`;
                     break;
             }
             storyOutput.innerHTML = `<div class="transparent-box"><p class="letter-content">${story}</p></div>`;
         }
-
     </script>
 </body>
 </html>
