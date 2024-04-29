@@ -69,23 +69,32 @@
             100% { transform: translateX(calc(100vw + 100px)); } /* Move the cat to the right edge of the viewport */
         }
 
-        /* Your additional styles */
-        .transparent-box {
-            background-image: url('https://i.pinimg.com/originals/4c/65/f9/4c65f913798dcd566fb929d0973a37e6.jpg');
-            background-size: cover;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            border: 1px solid #ddd;
+        /* Transparent box style */
+    .transparent-box {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1000; /* Ensure the box appears on top of other elements */
+        background-image: url('https://i.pinimg.com/originals/4c/65/f9/4c65f913798dcd566fb929d0973a37e6.jpg');
+        background-size: cover;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border: 1px solid #ddd;
         }
-        .letter-content {
-            font-family: 'Comic Sans MS', cursive; 
-            font-size: 17px;
-            line-height: 1.5;
-            color: #333;
+
+        /* Font style for letter content */
+    .letter-content {
+        font-family: 'Comic Sans MS', cursive;
+        font-size: 17px;
+        line-height: 1.5;
+        color: #333;
         }
-        .letter-content p {
-            margin-bottom: 10px;
+
+    .letter-content p {
+        margin-bottom: 10px;
+
         }
     </style>
 </head>
