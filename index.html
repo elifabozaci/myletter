@@ -83,9 +83,11 @@
             font-size: 17px;
             line-height: 1.5;
             color: #333;
-        }
-        .letter-content p {
-            margin-bottom: 10px;
+            background-color: #fff; /* Add a white background */
+            padding: 20px; /* Add padding for spacing */
+            border-radius: 8px; /* Add border radius for rounded corners */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for depth */
+            margin-bottom: 20px; /* Add margin at the bottom */
         }
     </style>
 </head>
@@ -173,13 +175,21 @@
                     story = 'Please select a topic and fill in the details.';
                     break;
             }
-            // Display the generated story
-            storyOutput.innerHTML = `
+            // Format the story as a letter
+            var formattedStory = `
                 <div class="transparent-box">
-                    <p class="letter-content">${story}</p>
+                    <div class="letter-content">
+                        <p>Date: April 29, 2024</p>
+                        <p>Dear Friend,</p>
+                        <p>${story}</p>
+                        <p>Yours sincerely,</p>
+                        <p>Your Name</p>
+                    </div>
                     <button onclick="window.location.href = window.location.href;">Try Again</button>
                 </div>
             `;
+            // Display the formatted story
+            storyOutput.innerHTML = formattedStory;
             // Hide the input fields and header
             var inputFields = document.getElementById('inputFields');
             var header = document.querySelector('h1');
