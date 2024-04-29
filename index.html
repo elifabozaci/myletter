@@ -78,9 +78,9 @@
         /* Transparent box style */
         .transparent-box {
             position: absolute;
-            top: 10%; /* Adjust the top position as needed */
+            top: 50%;
             left: 50%;
-            transform: translateX(-50%);
+            transform: translate(-50%, -50%);
             z-index: 1; /* Ensure the box appears below the header */
             background-image: url('https://i.pinimg.com/originals/4c/65/f9/4c65f913798dcd566fb929d0973a37e6.jpg');
             background-size: cover;
@@ -118,7 +118,7 @@
             <option value="plot2">My interesting dream</option>
             <option value="plot3">Picnic with my family</option>
             <option value="plot4">Fun day at the fun fair</option>
-      </select>
+        </select>
         <!-- Transparent box for user input -->
         <div class="transparent-box" id="inputFields" style="display: none;">
             <label for="nameInput">A name:</label>
@@ -143,6 +143,7 @@
         </div>
         <div id="storyOutput"></div>
     </div>
+    
     <script>
         function showInputFields() {
             var plotSelect = document.getElementById('plotSelect');
