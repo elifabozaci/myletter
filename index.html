@@ -23,9 +23,15 @@
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             backdrop-filter: blur(10px); /* Add a blur effect to the background */
+            position: relative; /* Add relative positioning to the container */
         }
         .container h1 {
             margin-bottom: 20px;
+            position: relative; /* Add relative positioning to the header */
+            z-index: 2; /* Ensure the header stays above other elements */
+            background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background for visibility */
+            padding: 10px; /* Add padding to the header for spacing */
+            border-radius: 8px; /* Add border radius to the header */
         }
         label, input, button {
             display: block;
@@ -71,11 +77,11 @@
 
         /* Transparent box style */
         .transparent-box {
-            position: fixed;
+            position: absolute;
             top: 10%; /* Adjust the top position as needed */
             left: 50%;
             transform: translateX(-50%);
-            z-index: 1000; /* Ensure the box appears on top of other elements */
+            z-index: 1; /* Ensure the box appears below the header */
             background-image: url('https://i.pinimg.com/originals/4c/65/f9/4c65f913798dcd566fb929d0973a37e6.jpg');
             background-size: cover;
             padding: 20px;
@@ -112,7 +118,7 @@
             <option value="plot2">My interesting dream</option>
             <option value="plot3">Picnic with my family</option>
             <option value="plot4">Fun day at the fun fair</option>
-        </select>
+      </select>
         <!-- Transparent box for user input -->
         <div class="transparent-box" id="inputFields" style="display: none;">
             <label for="nameInput">A name:</label>
