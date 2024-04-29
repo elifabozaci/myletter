@@ -87,18 +87,6 @@
         .letter-content p {
             margin-bottom: 10px;
         }
-
-        /* Fade-in animation */
-        @keyframes fade-in {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-
-        /* Fade-out animation */
-        @keyframes fade-out {
-            from { opacity: 1; }
-            to { opacity: 0; }
-        }    
     </style>
 </head>
 <body>
@@ -140,10 +128,7 @@
             <button onclick="generateStory()">Get Your Letter!</button>
         </div>
         <div id="storyOutput"></div>
-        <div id="storyOutput">
-        <!-- Your generated letter will be inserted here -->
-        </div>
-        <button onclick="resetPage()">Try Again</button>
+    </div>
     <script>
         function showInputFields() {
             var plotSelect = document.getElementById('plotSelect');
@@ -186,23 +171,6 @@
             }
             storyOutput.innerHTML = `<div class="transparent-box"><p class="letter-content">${story}</p></div>`;
         }
-            hideInputFields();
-        }
-        // Function to hide input fields with fade-out animation
-        function hideInputFields() {
-            var inputFields = document.getElementById('inputFields');
-            inputFields.style.animation = 'fade-out 0.5s forwards'; // Apply fade-out animation
-            setTimeout(() => { inputFields.style.display = 'none'; }, 500); // Hide input fields after animation completes
-        }
-
-        // Function to reset the page to its initial state
-        function resetPage() {
-            var inputFields = document.getElementById('inputFields');
-            inputFields.style.display = 'block'; // Show input fields
-            inputFields.style.animation = 'fade-in 0.5s forwards'; // Apply fade-in animation
-            document.getElementById('storyOutput').innerHTML = ''; // Clear the story output
-        }
-
     </script>
 </body>
 </html>
