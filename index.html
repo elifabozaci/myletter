@@ -57,17 +57,6 @@
             75% { color: #66ccff; }
             100% { color: #ffcc66; }
         }
-        /* Cat animation styles */
-        .cat {
-            position: absolute;
-            top: 0;
-            left: -100px; /* Start the cat outside the viewport */
-            animation: catWalk 10s linear infinite; /* Cat walking animation */
-        }
-        @keyframes catWalk {
-            0% { transform: translateX(-100px); }
-            100% { transform: translateX(calc(100vw + 100px)); } /* Move the cat to the right edge of the viewport */
-        }
 
         /* Your additional styles */
         .transparent-box {
